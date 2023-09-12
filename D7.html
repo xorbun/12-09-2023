@@ -63,7 +63,7 @@
 
     <div>
       <p>Anche questo testo è per gli esercizi</p>
-      <h2 id="changeMyColor" style="color: #ff00d6"></h2>
+      <h2 id="changeMyColor" style="color: #ff00d6">benvenuti</h2>
         Apri questa pagina con VSCode per scoprire gli esercizi
       </h2>
       <button onclick="makeItClickable()">elimina</button>
@@ -245,7 +245,6 @@
 
       const addRow = function () 
       {
-        
         let newrow=document.createElement("tr");
         let content1=document.createElement("td");
         content1.innerHTML="foto";
@@ -262,7 +261,8 @@
         const addrow=document.getElementById("tableArea");
         newrow.appendChild(addrow);
       };
-        addrow();
+    
+      
       /* ESERCIZIO 14
       Crea una funzione che nasconda le immagini della tabella quando eseguita
     */
@@ -273,8 +273,13 @@
       Crea una funzione che cambi il colore del h2 con id "changeMyColor" con un colore random ad ogni click ricevuto
     */
 
-      const changeColorWithRandom = function () {};
-
+      const changeColorWithRandom = function () 
+      {
+        const changer=document.getElementById("changeMyColor");
+        let randomcolor=Math.floor(Math.random()*16777215).toString(16);
+        changer.style.color="#"+ randomcolor;
+      };
+      changeColorWithRandom();
       /* EXTRA ESERCIZIO 16
       Crea una funzione che elimini le vocali da ogni elemento testuale della pagina (puoi aiutarti con i nuovi metodi degli array di ES6)
     */
